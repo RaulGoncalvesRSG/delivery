@@ -23,8 +23,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		//Configuração para liberar o acesso da aplicação para gerenciar o BD H2
 		if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
+			/*Configuração para liberar o acesso da aplicação para gerenciar o BD H2, caso contrário,
+			n será possível acessar o BD H2*/
 			http.headers().frameOptions().disable();
 		}
 		
@@ -36,6 +37,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		//Libera acesso para todas requisições
 		http.authorizeRequests().anyRequest().permitAll();
+		http.headers().frameOptions().disable();
 	}
 
 	/*Cors é um recurso q os navegadores tem q bloqueiam qnd a aplicação está em um domínio tenta
