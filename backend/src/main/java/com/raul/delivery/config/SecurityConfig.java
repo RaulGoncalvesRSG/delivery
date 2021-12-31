@@ -23,6 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
+		//Verifica se o arquivo application.properties tem o perfil de "test"
 		if (Arrays.asList(env.getActiveProfiles()).contains("test")) {
 			/*Configuração para liberar o acesso da aplicação para gerenciar o BD H2, caso contrário,
 			n será possível acessar o BD H2*/

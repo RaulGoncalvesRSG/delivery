@@ -20,14 +20,14 @@ import com.raul.delivery.repositories.ProductRepository;
 public class OrderService {
 
 	@Autowired
-	private OrderRepository repository;
+	private OrderRepository orderRepository;
 	
 	@Autowired
 	private ProductRepository productRepository;
 	
 	@Transactional(readOnly = true)		//Evita o lock de escrita no BD
 	public List<OrderDTO> findAll(){
-		List<Order> list = repository.findOrdersWithProducts();
+		List<Order> list = orderRepository.findOrdersWithProducts();
 		return list.stream().map(x -> new OrderDTO(x)).collect(Collectors.toList());
 	}
 	
@@ -41,15 +41,15 @@ public class OrderService {
 			order.getProducts().add(product);		//Inicialmente a lista está vazia. Add cada produto
 		}
 		
-		order = repository.save(order);
+		order = orderRepository.save(order);
 		return new OrderDTO(order);
 	}
 	
 	@Transactional				//@Transactional pq é uma alteração no BD
 	public OrderDTO setDelivered(Long id){
-		Order order = repository.getById(id);
+		Order order = orderRepository.getById(id);
 		order.setStatus(OrderStatus.DELIVERED);
-		order = repository.save(order);
+		order = orderRepository.save(order);
 		return new OrderDTO(order);
 	}
 }
