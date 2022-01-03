@@ -1,5 +1,6 @@
 .home-container {
   padding-top: 100px;
+  /*Calcula 100% da altura do dispositivo do usuário menos o tamanho do padding do rodapé*/
   height: calc(100vh - 254px);
 }
 

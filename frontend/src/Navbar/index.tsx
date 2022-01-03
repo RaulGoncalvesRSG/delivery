@@ -1,4 +1,4 @@
-import "./style.css";
+import "./styles.css";
 //ReactComponent é um nome genérico
 import {ReactComponent as Logo} from "./logo.svg";
 
