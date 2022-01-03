@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/*":root" pq vai estar disponível na raiz da aplicação - qualquer lugar da aplicação irá ter acesso dessas variáveis*/
+:root {
+    /*variáveis do css começam com "--"*/
+  --primary-color: #da5c5c;
+  --primary-hover-color: #a74b4b;
+  --dark-color: #263238;
+  --secondary-color: #9E9E9E;
+  --light-color: #F5F5F5;
+}
+
+html, body {
+  margin: 0;
+  padding:0;
+}
+
+body {
+    /*Fonte de toda a aplicação*/
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    /*Remove o underline de todas tags "a" utilizada no projeto*/
+  text-decoration: none;
+}
