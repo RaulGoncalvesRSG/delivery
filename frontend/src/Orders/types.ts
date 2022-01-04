@@ -5,3 +5,10 @@ export type Product = {
     description: string;
     imageUri: string;
 }
+
+//Dados pertencentes na API
+export type OrderLocationData = {
+    latitude: number;
+    longitude: number;
+    address: string;
+}
