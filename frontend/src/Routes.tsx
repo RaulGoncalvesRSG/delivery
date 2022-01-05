@@ -1,5 +1,5 @@
 //import {BrowserRouter, Switch, Route } from "react-router-dom";
-import { BrowserRouter as Router, Route, Routes as Rotas, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes as Rotas } from "react-router-dom";
 import Home from "./Home";
 import NavBar from "./Navbar";
 import Orders from "./Orders";
@@ -8,11 +8,7 @@ import Orders from "./Orders";
 function Routes(){
     return (
         <Router>
-                <NavBar/>
-        {/**  <Switch>*/}   
-       {/** <Route path="/orders">
-                    <Orders/>
-                </Route>*/}         
+            <NavBar/>           
             <Rotas>
                 <Route path="/orders" element={<Orders/>} />
                 <Route path="/home" element={<Home/>} />

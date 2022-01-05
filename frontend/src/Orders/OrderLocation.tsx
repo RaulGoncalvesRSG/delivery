@@ -2,7 +2,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 //https://react-select.com/home     @types/react-select para o typescript
 import AsyncSelect from "react-select/async";      //async faz com q os dados sejam buscados enquanto está digitando
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { fetchLocalMapBox } from '../api';
 import { OrderLocationData } from './types';
 
