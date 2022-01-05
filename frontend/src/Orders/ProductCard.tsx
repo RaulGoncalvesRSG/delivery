@@ -1,19 +1,10 @@
+import { formatPrice } from "./helpers";
 import { Product } from "./types";
 
 type Props = {
     product: Product;
     onSelectProduct: (product: Product) => void
     isSelected: boolean;                
-}
-
-function formatPrice(price: number) {
-    //Intl - API de internalização do JS
-    const formatter = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"     //Transforma em Real
-    })
-
-    return formatter.format(price);
 }
 
 function ProductCard({product, onSelectProduct, isSelected}: Props){
