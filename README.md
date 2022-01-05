@@ -12,8 +12,11 @@ O sistema back-end permite o usuário realizar pedidos de produtos. A arquitetur
 * Banco de Dados H2
 * MySql
 
-## Organização das camadas
-![Organização das camadas](camadas/uml.png)
+## Telas do sistema
+![Tea inicial](imagens_sistema/home.png)
+![Tea inicial](imagens_sistema/tela_produtos.png)
+![Tea inicial](imagens_sistema/produtos.png)
+![Tea inicial](imagens_sistema/endereco.png)
 
 ## Autor
 Raul Santos Gonçalves
