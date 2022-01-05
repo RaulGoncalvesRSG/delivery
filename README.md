@@ -23,7 +23,7 @@ Ao selecionar um produto, o card tem a sua cor alterada e a quantidade é contab
 
 ![Tea inicial](imagens_sistema/produtos.png)
 
-O usuário pode digitar no campo o endereço de entrega e o mapa é atualizado automaticamente. Abaixo do mape é possível visualizar o valor total do pedido e o botão de confirmação.
+O usuário pode digitar no campo o endereço de entrega e o mapa é atualizado automaticamente. Abaixo do mapa é possível visualizar o valor total do pedido e o botão de confirmação.
 
 ![Tea inicial](imagens_sistema/endereco.png)
 
